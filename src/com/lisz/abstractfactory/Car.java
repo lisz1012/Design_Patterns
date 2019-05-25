@@ -1,7 +1,6 @@
-package com.lisz.factory;
+package com.lisz.abstractfactory;
 
-
-public class Car implements Moveable {
+public class Car {
 	public void go() {
 		System.out.println("Car go wuwuwuwu...");
 	}
