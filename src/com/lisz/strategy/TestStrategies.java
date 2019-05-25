@@ -37,9 +37,9 @@ public class TestStrategies {
 		sorter.selectionSort(boys, new Comparator<Boy>() {
 			@Override
 			public int compare(Boy b1, Boy b2) {
-				if (b1.getPersonality() < b2.getPersonality()) {
+				if (b1.getCharacter() < b2.getCharacter()) {
 					return 1;
-				} else if (b1.getPersonality() > b2.getPersonality()) {
+				} else if (b1.getCharacter() > b2.getCharacter()) {
 					return -1;
 				} else {
 					return 0;
@@ -91,9 +91,9 @@ public class TestStrategies {
 		sorter.selectionSort(girls, new Comparator<Girl>() {
 			@Override
 			public int compare(Girl b1, Girl b2) {
-				if (b1.getPersonality() < b2.getPersonality()) {
+				if (b1.getCharacter() < b2.getCharacter()) {
 					return 1;
-				} else if (b1.getPersonality() > b2.getPersonality()) {
+				} else if (b1.getCharacter() > b2.getCharacter()) {
 					return -1;
 				} else {
 					return 0;

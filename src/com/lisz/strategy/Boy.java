@@ -6,7 +6,7 @@ public class Boy extends Person implements Comparable<Boy> {
 		super(faceValue, money, personality);
 	}
 
-	//先按照金钱，再按照颜值进行升序排列
+	//Boy自己的默认比较方式：先按照金钱，再按照颜值进行升序排列
 	@Override
 	public int compareTo(Boy b) {
 		if (money < b.money) {

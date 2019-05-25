@@ -3,12 +3,13 @@ package com.lisz.strategy;
 public class Person {
 	protected int faceValue;
 	protected double money;
-	protected int personality;
+	protected int character; //人品：character，not the class java.lang.Character
 	
-	public Person(int faceValue, double money, int personality) {
+	
+	public Person(int faceValue, double money, int character) {
 		this.faceValue = faceValue;
 		this.money = money;
-		this.personality = personality;
+		this.character = character;
 	}
 
 	public int getFaceValue() {
@@ -19,12 +20,12 @@ public class Person {
 		return money;
 	}
 
-	public int getPersonality() {
-		return personality;
+	public int getCharacter() {
+		return character;
 	}
 	
 	@Override
 	public String toString() {
-		return faceValue + "|" + money + "|" + personality;
+		return faceValue + "|" + money + "|" + character;
 	}
 }

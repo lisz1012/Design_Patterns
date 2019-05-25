@@ -2,7 +2,8 @@ package com.lisz.factory;
 
 public class Main {
 	public static void main(String[] args) {
-		Moveable m = new CarFactory().createCar();//new Car();
+		MoveableFactory factory = new CarFactory();
+		Moveable m = factory.create();//new Car();
 		m.go();
 	}
 }
