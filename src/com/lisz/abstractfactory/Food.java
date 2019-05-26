@@ -1,5 +1,5 @@
 package com.lisz.abstractfactory;
 
-public interface Food {
-	void printName();
+public abstract class Food {
+	abstract void printName();
 }

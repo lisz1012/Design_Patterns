@@ -1,5 +1,5 @@
 package com.lisz.abstractfactory;
 
-public interface Vehicle {
-	void go();
+public abstract class Vehicle {
+	abstract void go();
 }

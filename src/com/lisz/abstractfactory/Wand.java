@@ -1,6 +1,6 @@
 package com.lisz.abstractfactory;
 
-public class Wand implements Weapon {
+public class Wand extends Weapon {
 	public void shoot() {
 		System.out.println("霹雳");
 	}

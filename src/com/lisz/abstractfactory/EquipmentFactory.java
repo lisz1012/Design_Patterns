@@ -1,8 +1,8 @@
 package com.lisz.abstractfactory;
 
 
-public interface EquipmentFactory {
-	Weapon createWeapon();
-	Vehicle createVehicle();
-	Food createFood();
+public abstract class EquipmentFactory {
+	abstract Weapon createWeapon();
+	abstract Vehicle createVehicle();
+	abstract Food createFood();
 }

@@ -1,6 +1,6 @@
 package com.lisz.abstractfactory;
 
-public class MagicEquipmentFactory implements EquipmentFactory {
+public class MagicEquipmentFactory extends EquipmentFactory {
 
 	@Override
 	public Weapon createWeapon() {

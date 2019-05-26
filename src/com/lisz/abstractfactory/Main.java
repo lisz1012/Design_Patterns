@@ -18,7 +18,7 @@ public class Main {
 		Weapon w = equipmentFactory.createWeapon();
 		Food f = equipmentFactory.createFood();
 		
-		m.go();
+		v.go();
 		w.shoot();
 		f.printName();
 	}

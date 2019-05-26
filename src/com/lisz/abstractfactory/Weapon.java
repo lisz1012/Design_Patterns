@@ -1,5 +1,5 @@
 package com.lisz.abstractfactory;
 
-public interface Weapon {
-	void shoot();
+public abstract class Weapon {
+	abstract void shoot();
 }
