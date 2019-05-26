@@ -14,7 +14,7 @@ public class Main {
 		EquipmentFactory equipmentFactory = new MagicEquipmentFactory();
 		
 		// The lines below don't need change
-		Vehicle m = equipmentFactory.createVehicle();
+		Vehicle v = equipmentFactory.createVehicle();
 		Weapon w = equipmentFactory.createWeapon();
 		Food f = equipmentFactory.createFood();
 		
