@@ -2,8 +2,8 @@ package com.lisz.strategy;
 
 public class Boy extends Person implements Comparable<Boy> {
 	
-	public Boy(int faceValue, double money, int personality) {
-		super(faceValue, money, personality);
+	public Boy(int faceValue, double money, int character) {
+		super(faceValue, money, character);
 	}
 
 	//Boy自己的默认比较方式：先按照金钱，再按照颜值进行升序排列
