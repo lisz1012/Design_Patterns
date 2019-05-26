@@ -1,8 +1,6 @@
 package com.lisz.abstractfactory;
 
-import com.lisz.factory.Moveable;
-
-public class Broom implements Moveable {
+public class Broom implements Vehicle {
 	public void go() {
 		System.out.println("Broom flying chuachuachua...");
 	}

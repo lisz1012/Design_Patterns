@@ -1,8 +1,7 @@
 package com.lisz.abstractfactory;
 
-import com.lisz.factory.Moveable;
 
-public class ModernEquipmentFactory implements AbstractFactory {
+public class ModernEquipmentFactory implements EquipmentFactory {
 
 	@Override
 	public Weapon createWeapon() {
@@ -10,7 +9,7 @@ public class ModernEquipmentFactory implements AbstractFactory {
 	}
 
 	@Override
-	public Moveable createVehicle() {
+	public Vehicle createVehicle() {
 		return new Car();
 	}
 

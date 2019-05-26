@@ -1,8 +1,6 @@
 package com.lisz.abstractfactory;
 
-import com.lisz.factory.Moveable;
-
-public class MagicEquipmentFactory implements AbstractFactory {
+public class MagicEquipmentFactory implements EquipmentFactory {
 
 	@Override
 	public Weapon createWeapon() {
@@ -10,7 +8,7 @@ public class MagicEquipmentFactory implements AbstractFactory {
 	}
 
 	@Override
-	public Moveable createVehicle() {
+	public Vehicle createVehicle() {
 		return new Broom();
 	}
 
