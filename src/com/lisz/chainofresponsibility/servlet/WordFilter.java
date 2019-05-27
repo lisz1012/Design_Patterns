@@ -7,17 +7,12 @@ public class WordFilter extends AbstractFilter {
 	}
 
 	@Override
-	public boolean doFilter(Request request, Response response) {
+	public boolean doFilter(Request request, Response response, FilterChain fc) {
 		String message = request.getMessage();
 		message = message.replaceAll("ass hole", "good person");
 		request.setMessage(message);
 		System.out.println(this.getClass().getSimpleName() + ": " + request.getMessage());
-		if (fc.hasNext()) {
-			Filter filter = fc.next();
-			filter.doFilter(request, response);
-		} else {
-			response.setMessage(request.getMessage());
-		}
+		fc.doFilter(request, response, fc);
 		message = response.getMessage();
 		message = message.replaceAll("shit", "good");
 		response.setMessage(message);

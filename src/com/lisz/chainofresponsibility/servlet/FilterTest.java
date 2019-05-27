@@ -10,7 +10,7 @@ public class FilterTest {
 		  .addFilter(new PoliticalFilter(fc))
 		  .addFilter(new HTMLFilter(fc));
 		
-		fc.doFilter(request, response);
+		fc.doFilter(request, response, fc);
 	}
 
 }

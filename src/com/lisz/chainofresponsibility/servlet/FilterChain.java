@@ -1,6 +1,8 @@
 package com.lisz.chainofresponsibility.servlet;
 
-public class FilterChain extends AbstractFilter {
+import java.util.Iterator;
+
+public class FilterChain extends AbstractFilter implements Iterator<Filter> {
 	private int index;
 	
 	public FilterChain(FilterChain fc) {
@@ -16,9 +18,11 @@ public class FilterChain extends AbstractFilter {
 	}
 	
 	@Override
-	public boolean doFilter(Request request, Response response) {
+	public boolean doFilter(Request request, Response response, FilterChain fc) {
 		if (hasNext()) {
-			next().doFilter(request, response);
+			next().doFilter(request, response, this);
+		} else {
+			response.setMessage(request.getMessage());
 		}
 		
 		return true;
