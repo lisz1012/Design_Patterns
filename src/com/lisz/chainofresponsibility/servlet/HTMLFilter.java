@@ -12,7 +12,9 @@ public class HTMLFilter extends AbstractFilter {
 		message = message.replaceAll("<", "[");
 		request.setMessage(message);
 		System.out.println(this.getClass().getSimpleName() + ": " + request.getMessage());
+		
 		fc.doFilter(request, response, fc);
+		
 		message = response.getMessage();
 		message = message.replaceAll(">", "]");
 		response.setMessage(message);

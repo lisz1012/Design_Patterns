@@ -12,7 +12,9 @@ public class WordFilter extends AbstractFilter {
 		message = message.replaceAll("ass hole", "good person");
 		request.setMessage(message);
 		System.out.println(this.getClass().getSimpleName() + ": " + request.getMessage());
+		
 		fc.doFilter(request, response, fc);
+		
 		message = response.getMessage();
 		message = message.replaceAll("shit", "good");
 		response.setMessage(message);

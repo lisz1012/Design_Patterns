@@ -12,7 +12,9 @@ public class PoliticalFilter extends AbstractFilter {
 		message = message.replaceAll("Trump", "lisz");
 		request.setMessage(message);
 		System.out.println(this.getClass().getSimpleName() + ": " + request.getMessage());
+		
 		fc.doFilter(request, response, fc);
+		
 		message = response.getMessage();
 		message = message.replaceAll("build wall", "give people money");
 		response.setMessage(message);
