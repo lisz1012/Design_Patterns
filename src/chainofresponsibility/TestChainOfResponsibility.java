@@ -1,19 +1,16 @@
 package chainofresponsibility;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TestChainOfResponsibility {
 	
 	public static void main(String[] args) {
-		List<MessageFilter> filters = new ArrayList<>();
-		filters.add(new TagMessageFilter());
-		filters.add(new SensitiveMessageFilter());
+		FilterChain fc = new FilterChain();
+		fc.addFfilter(new TagMessageFilter());
+		fc.addFfilter(new SensitiveMessageFilter());
 		
 		Message message = new Message();
 		message.setName("lisz");
 		message.setPayload("大家好:)，<tag> 欢迎访问996");
-		filters.forEach(f->f.doFilter(message));
+		fc.doFilter(message);
 		System.out.println(message);
 	}
 }
