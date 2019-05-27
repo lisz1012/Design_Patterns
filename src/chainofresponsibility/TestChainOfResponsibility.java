@@ -3,9 +3,13 @@ package chainofresponsibility;
 public class TestChainOfResponsibility {
 	
 	public static void main(String[] args) {
-		FilterChain fc = new FilterChain();
-		fc.addFfilter(new TagMessageFilter());
-		fc.addFfilter(new SensitiveMessageFilter());
+		MessageFilterChain fc = new MessageFilterChain();
+		fc.addFfilter(new TagMessageFilter())
+		  .addFfilter(new SensitiveMessageFilter());
+		
+		MessageFilterChain fc2 = new MessageFilterChain();
+		fc2.addFfilter(new FaceMessageFilter())
+		   .addFfilter(new UrlMessageFilter());
 		
 		Message message = new Message();
 		message.setName("lisz");
