@@ -17,8 +17,12 @@ public class MessageFilterChain implements MessageFilter {
 	}
 	
 	@Override
-	public Message doFilter(Message message) {
-		filters.forEach(f->f.doFilter(message));
-		return message;
+	public boolean doFilter(Message message) {
+		for (MessageFilter messageFilter : filters) {
+			if (!messageFilter.doFilter(message)) {
+				return false;
+			}
+		}
+		return true;
 	}
 }

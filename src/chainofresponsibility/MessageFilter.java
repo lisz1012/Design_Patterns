@@ -1,5 +1,5 @@
 package chainofresponsibility;
 
 public interface MessageFilter {
-	Message doFilter(Message message);
+	boolean doFilter(Message message);
 }
