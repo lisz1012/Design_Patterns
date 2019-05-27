@@ -11,9 +11,11 @@ public class TestChainOfResponsibility {
 		fc2.addFfilter(new FaceMessageFilter())
 		   .addFfilter(new UrlMessageFilter());
 		
+		fc.addFfilter(fc2);	
+		
 		Message message = new Message();
 		message.setName("lisz");
-		message.setPayload("大家好:)，<tag> 欢迎访问996");
+		message.setPayload("大家好:)，<tag> 欢迎访问996 lisz.com");
 		fc.doFilter(message);
 		System.out.println(message);
 	}
