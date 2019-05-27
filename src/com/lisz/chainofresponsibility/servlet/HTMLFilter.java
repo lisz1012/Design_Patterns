@@ -18,6 +18,15 @@ public class HTMLFilter extends AbstractFilter {
 		response.setMessage(message);
 		System.out.println(this.getClass().getSimpleName() + ": " + response.getMessage());
 		return true;
+		
+		/* Output:
+		 WordFilter: <H1>Trump is an good person, because he tries to build wall, which is a shit.</H1>
+		 PoliticalFilter: <H1>lisz is an good person, because he tries to build wall, which is a shit.</H1>
+		 HTMLFilter: [H1>lisz is an good person, because he tries to build wall, which is a shit.[/H1>
+		 HTMLFilter: [H1]lisz is an good person, because he tries to build wall, which is a shit.[/H1]
+		 PoliticalFilter: [H1]lisz is an good person, because he tries to give people money, which is a shit.[/H1]
+		 WordFilter: [H1]lisz is an good person, because he tries to give people money, which is a good.[/H1]
+		 */
 	}
 
 }
