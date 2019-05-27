@@ -1,4 +1,4 @@
-package chainofresponsibility;
+package com.lisz.chainofresponsibility;
 
 import java.util.ArrayList;
 import java.util.List;

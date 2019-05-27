@@ -1,4 +1,4 @@
-package chainofresponsibility;
+package com.lisz.chainofresponsibility;
 
 public class SensitiveMessageFilter implements MessageFilter {
 
