@@ -1,4 +1,4 @@
-package com.lisz.strategy.observer;
+package com.lisz.observer;
 
 public class Brother implements WakeUpListener {
 

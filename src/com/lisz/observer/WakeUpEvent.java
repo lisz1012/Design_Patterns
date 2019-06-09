@@ -1,4 +1,4 @@
-package com.lisz.strategy.observer;
+package com.lisz.observer;
 
 public class WakeUpEvent <T>{
 	private final long timestamp;

@@ -1,4 +1,4 @@
-package com.lisz.strategy.observer;
+package com.lisz.observer;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
