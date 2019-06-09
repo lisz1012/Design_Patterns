@@ -4,7 +4,7 @@ public class Dad implements WakeUpListener {
 
 	@Override
 	public void actionPerformed(WakeUpEvent<Baby> e) {
-		System.out.println("My baby " + e.getSource().getName() + " wakes up, play with my baby...");
+		System.out.println("My baby " + e.getSource().getName() + " wakes up at " + e.getLocation() + ", play with my baby...");
 	}
 
 }

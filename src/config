@@ -1,0 +1,2 @@
+#WakeUpListeners
+wakeuplisteners=com.lisz.strategy.observer.Mom,com.lisz.strategy.observer.Dad
