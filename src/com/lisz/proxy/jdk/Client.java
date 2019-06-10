@@ -29,7 +29,7 @@ class LogHandler implements InvocationHandler {
 	}
 
 	@Override
-	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {//Proxy是自动生成的那个代理对象，即12行的proxy
 		System.out.println("Car starts ... ");
 		Object o = method.invoke(m, args);
 		System.out.println("Car stops ... ");
