@@ -8,6 +8,7 @@ public class Client {
 
 	public static void main(String[] args) {
 		Car car = new Car();
+		System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles", "true");
 		Moveable proxy = (Moveable)Proxy.newProxyInstance(Car.class.getClassLoader(), new Class[]{Moveable.class}, new LogHandler(car));
 		proxy.move();
 		/*
