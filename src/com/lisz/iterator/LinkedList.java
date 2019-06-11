@@ -3,11 +3,13 @@ package com.lisz.iterator;
 public class LinkedList<E> implements Collection<E> {
 	private Node<E> head;
 	private Node<E> tail;
+	private Node<E> cur;
 	private int size = 0;
+	private Iterator<E> iterator = new LinkedListIterator<>();
 	
 	public void add(E e) {
 		if (head == null && tail == null) {
-			head = tail = new Node<E>(e);
+			head = tail = cur = new Node<E>(e);
 		} else {
 			tail.next = new Node<E>(e);
 			tail = tail.next;
@@ -50,5 +52,30 @@ public class LinkedList<E> implements Collection<E> {
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i));
 		}
+		
+		Iterator<Integer> iterator = list.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+	}
+
+	@Override
+	public Iterator<E> iterator() {
+		return iterator;
+	}
+	
+	private class LinkedListIterator<E> implements Iterator<E> {
+		@Override
+		public boolean hasNext() {
+			return cur != null;
+		}
+
+		@Override
+		public E next() {
+			E ret = (E)cur.data;
+			cur = cur.next;
+			return ret;
+		}
+		
 	}
 }

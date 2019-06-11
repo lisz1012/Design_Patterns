@@ -6,4 +6,6 @@ public interface Collection<E> {
 	public E get(int i);
 	
 	public int size();
+	
+	public Iterator<E> iterator();
 }
