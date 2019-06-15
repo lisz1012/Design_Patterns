@@ -8,7 +8,7 @@ public class ClassWriterTest {
 
 	public static void main(String[] args) {
 		ClassWriter cw = new ClassWriter(0);
-		cw.visit(V1_5, ACC_PUBLIC + ACC_STATIC + ACC_FINAL, "pkg/Comparable", null, "java/lang/Object", null);
+		cw.visit(V1_5, ACC_PUBLIC + ACC_ABSTRACT + ACC_INTERFACE, "pkg/Comparable", null, "java/lang/Object", null);
 		cw.visitField(ACC_PUBLIC + ACC_STATIC + ACC_FINAL, "LESS", "I", null, -1);
 		cw.visitField(ACC_PUBLIC + ACC_STATIC + ACC_FINAL, "EQUAL", "I", null, 0);
 		cw.visitField(ACC_PUBLIC + ACC_STATIC + ACC_FINAL, "GREATER", "I", null, 1);
