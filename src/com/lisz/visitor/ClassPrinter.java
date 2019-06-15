@@ -4,14 +4,14 @@ import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.MethodVisitor;
 
-import static org.objectweb.asm.Opcodes.ASM4;
+import static org.objectweb.asm.Opcodes.ASM7;
 
 import org.objectweb.asm.ClassReader;
 
 public class ClassPrinter extends ClassVisitor {
 
 	public ClassPrinter() {
-		super(ASM4);
+		super(ASM7);
 	}
 
 	@Override
