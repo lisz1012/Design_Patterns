@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Baby baby = new Baby("Sophia");
-		baby.addWakeUpListener(new Aunt());
+		baby.addWakeUpListener(new Aunt()); // 注册Aunt作为一个Listener，baby醒来可能在另外一个线程中触发，所以可能是异步
 		baby.addWakeUpListener(new Brother());
 		baby.cry();
 		
