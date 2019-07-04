@@ -8,7 +8,8 @@ public class Plane {
 	 * 查INCSTANCE已然不为空，上面第一次的if不执行，直接return
 	 * INSTANCE了，但此时还没有初始化完成，可能得到不正确的初始化，
 	 * 所以必须加volatile，1.线程间可见 2.防止指令重排。不加volatile
-	 * 有可能产生一个半初始化的状态，但是太难模拟了，百万级的并发才可以
+	 * 有可能产生一个半初始化的状态，但是太难模拟了，百万级的并发才可以.
+	 * volatile修饰的是变量，跟这个变量相关的不要重排序
 	 */
 	private static volatile Plane INSTANCE = null;
 	
