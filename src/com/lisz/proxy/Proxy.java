@@ -12,6 +12,7 @@ import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 
 //出现找不到类错误的时候刷新整个项目文件夹
+//这个Proxy其实是个动态生成各种代理的“代理”
 public class Proxy {
 	public static Object newProxyInstance(Class infce, InvocationHandler handler) throws Exception {
 		String src = 
